@@ -8,3 +8,18 @@ $very-dark-gray: hsl(0, 0%, 41%);
 
 // Font size
 $font-size: 15px;
+
+// Layouts
+
+@mixin flex-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin reset-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

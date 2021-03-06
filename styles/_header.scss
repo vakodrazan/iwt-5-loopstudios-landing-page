@@ -1,0 +1,6 @@
+@import "./variables";
+
+.header {
+    @include flex-layout();
+    background-color: black;
+}

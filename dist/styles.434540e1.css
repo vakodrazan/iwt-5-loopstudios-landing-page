@@ -27,6 +27,10 @@ img {
   max-width: 100%;
 }
 
+p {
+  margin: 0;
+}
+
 .container {
   --padding-left: 20px;
   --padding-right: 20px;
@@ -138,6 +142,43 @@ body > input[type=checkbox]:checked ~ .header .menu {
     max-width: 60%;
     --font-size: 70px;
   }
+}
+
+.article__features {
+  padding-top: 88px;
+  text-align: center;
+}
+@media (min-width: 650px) {
+  .article__features {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: unset;
+  }
+}
+.article__features__content {
+  padding-top: 45px;
+}
+@media (min-width: 650px) {
+  .article__features__content {
+    padding: 63px;
+    max-width: 30%;
+    background-color: white;
+    margin-left: -159px;
+    margin-bottom: -1px;
+    z-index: 1;
+  }
+}
+.article__features__content__title {
+  text-transform: uppercase;
+  font-size: 36px;
+}
+.article__features__content__description {
+  color: dimgray;
+  padding-top: 24px;
 }
 
 /*# sourceMappingURL=/styles.434540e1.css.map */

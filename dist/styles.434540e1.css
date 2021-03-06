@@ -43,7 +43,6 @@ img {
 
 .header {
   padding-top: 38px;
-  background-color: red;
 }
 .header .container {
   display: flex;
@@ -104,6 +103,41 @@ body > [type=checkbox]:checked ~ .header {
 body > input[type=checkbox]:checked ~ .header .menu {
   transition: all 0.3s;
   background-image: url("/icon-close.1add023a.svg");
+}
+
+.masthead {
+  background-image: url("/image-hero.1839d237.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -100px;
+  padding-top: 213px;
+  padding-bottom: 200px;
+  color: white;
+}
+@media (min-width: 650px) {
+  .masthead {
+    background-image: url("/image-hero.3d23263c.jpg");
+  }
+}
+.masthead__title {
+  --font-size: 36px;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  padding: 26px;
+  border: 2px solid white;
+}
+@media (min-width: 650px) {
+  .masthead__title {
+    max-width: 40%;
+    --font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .masthead__title {
+    max-width: 60%;
+    --font-size: 70px;
+  }
 }
 
 /*# sourceMappingURL=/styles.434540e1.css.map */

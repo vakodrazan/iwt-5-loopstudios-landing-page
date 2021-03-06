@@ -1,0 +1,74 @@
+@import "./variables";
+
+.article__testimonials {
+    padding-top: 90px;
+    display: grid;
+    gap: 50px;
+    text-transform: uppercase;
+
+    &__title {
+        font-size: 36px;
+    }
+
+    &__recommendation {
+        grid-row: 3 / 3;
+        background-color: transparent;
+        line-height: 14px;
+        letter-spacing: 5px;
+        padding: 13px 43px 13px 38px;
+        border: 1px solid $very-dark-gray;
+        text-transform: uppercase;
+        justify-self: center;
+    }
+
+    &__list {
+        display: grid;
+        gap: 63px;
+
+        @media (min-width: $breakpoint-desktop) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 23px;
+            width: fit-content;
+        }
+
+        &__creation {
+            color: $white;
+
+            &__link {
+
+                &:hover {
+                    opacity: 0.2;
+                    color: $very-dark-gray;
+                }
+
+                &__picture {
+                    &__image {
+                        width: -webkit-fill-available;
+                    }
+                }
+
+                &__title {
+                    padding-left: 22px;
+                    margin-top: -100px;
+                    font-size: 32px;
+                    max-width: 40%;
+                    @media (min-width: $breakpoint-tablet) {
+                        max-width: 20%;
+                    }
+
+                    &--depth {
+                        word-spacing: 9999rem;
+                    }
+
+                    &--arcade {
+                        word-spacing: 9999rem;
+                    }
+
+                    &--grid {
+                        word-spacing: 9999rem;
+                    }
+                }
+            }
+        }
+    }
+}

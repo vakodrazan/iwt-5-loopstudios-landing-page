@@ -42,11 +42,68 @@ img {
 }
 
 .header {
+  padding-top: 38px;
+  background-color: red;
+}
+.header .container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  color: white;
+}
+.header .menu {
+  background-image: url("/icon-hamburger.cb455b0f.svg");
+  background-repeat: no-repeat;
+  color: transparent;
+  cursor: pointer;
+}
+@media (min-width: 650px) {
+  .header .menu {
+    display: none;
+  }
+}
+.header__navigation {
+  position: absolute;
+  z-index: 3;
+  top: 25%;
+  left: 5%;
+  bottom: 0;
+  transform: translateX(-250%);
+  transition: transform 0.2s;
+}
+@media (min-width: 650px) {
+  .header__navigation {
+    position: initial;
+    transform: none;
+    transition: none;
+  }
+  .header__navigation__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+body > [type=checkbox] {
+  display: none;
+}
+
+body > [type=checkbox]:checked ~ .header .header__navigation {
+  transform: translateX(0);
+}
+
+body > [type=checkbox]:checked ~ .header {
+  width: 100vw;
+  height: 100vh;
   background-color: black;
+}
+
+body > input[type=checkbox]:checked ~ .header .menu {
+  transition: all 0.3s;
+  background-image: url("/icon-close.1add023a.svg");
 }
 
 /*# sourceMappingURL=/styles.434540e1.css.map */

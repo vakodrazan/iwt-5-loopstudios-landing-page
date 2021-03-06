@@ -1,6 +1,63 @@
 @import "./variables";
 
 .header {
-    @include flex-layout();
+    padding-top: 38px;
+    background-color: red;
+
+    .container {
+        @include flex-layout();
+        color: $white;
+    }
+
+    .menu {
+        background-image: url("#{$image_path}icon-hamburger.svg");
+        background-repeat: no-repeat;
+        color: transparent;
+        cursor: pointer;
+      
+        @media (min-width: $breakpoint-tablet) {
+          display: none;
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        z-index: 3;
+        top: 25%;
+        left: 5%;
+        bottom: 0;
+        transform: translateX(-250%);
+        transition: transform 0.2s;
+
+        @media (min-width: $breakpoint-tablet) {
+            position: initial;
+            transform: none;
+            transition: none;
+
+            &__menu {
+                @include flex-layout();
+                gap: 20px;
+            }
+        }
+    }
+}
+
+body > [type="checkbox"] {
+    display: none;
+}
+
+body > [type="checkbox"]:checked ~ .header .header__navigation {
+    transform: translateX(0);
+}
+
+body > [type="checkbox"]:checked ~ .header {
+    width: 100vw;
+    height: 100vh;
     background-color: black;
+}
+
+
+body > input[type=checkbox]:checked ~ .header .menu {
+    transition: all 0.3s;
+    background-image: url("#{$image_path}icon-close.svg");
 }
